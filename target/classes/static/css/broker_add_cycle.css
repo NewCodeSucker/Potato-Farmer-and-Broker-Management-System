@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Thai", sans-serif;
+}
+
+body {
+    background: #f1f5f9;
+    padding: 0 0 40px 0; /* เอา padding ด้านบนออกเพื่อให้ Navbar ชิดขอบจอพอดี */
+}
+
+/* --- Navigation Bar --- */
+.top-navbar {
+    background: #2563eb;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.top-navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    color: white !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 5px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: block;
+}
+
+.nav-link {
+    color: white !important;
+    padding: 12px 20px !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, .15);
+    border-radius: 8px;
+}
+
+/* --- Page Layout & Content --- */
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px auto 30px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.back-btn {
+    width: 45px;
+    height: 45px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.page-header h1 {
+    color: #0f172a;
+    font-size: 1.8rem;
+}
+
+.page-header p {
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.form-container {
+    max-width: 1000px; 
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* แก้ไข Padding ที่ซ้อนทับกันเรียบร้อย ขยับเป็น 30px กำลังสบายตา */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+}
+
+.card h2 {
+    color: #2563eb;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #eff6ff;
+    padding-bottom: 10px;
+}
+
+/* เพิ่มความเฉพาะเจาะจงเพื่อไม่ให้ Bootstrap มาดึง Grid พัง */
+.form-container .row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-control {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 1rem;
+    color: #334155;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.btn-save {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-save:hover {
+    background: #1d4ed8;
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 20px;
+    }
+    .form-container .row {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+    .page-header {
+        margin-top: 10px;
+        padding: 0 15px;
+    }
+    .form-container {
+        padding: 0 15px;
+    }
+    .card {
+        padding: 20px;
+    }
+}

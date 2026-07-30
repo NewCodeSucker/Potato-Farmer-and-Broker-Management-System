@@ -1,0 +1,258 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --blue:#2563eb;
+    --blue-dark:#1d4ed8;
+    --blue-light:#dbeafe;
+    --blue-soft:#eff6ff;
+
+    --green:#16a34a;
+    --green-dark:#15803d;
+    --green-light:#dcfce7;
+    --green-soft:#ecfdf5;
+
+    --red:#dc2626;
+    --red-light:#fee2e2;
+    --red-soft:#fef2f2;
+
+    --orange:#ea580c;
+    --orange-light:#ffedd5;
+
+    --yellow:#b45309;
+    --yellow-light:#fef3c7;
+
+    --text:#0f172a;
+    --muted:#64748b;
+    --line:#dbe3ea;
+    --white:#ffffff;
+    --background:#f4f7fb;
+}
+
+
+body{
+    background:#f1f5f9;
+    font-family:"Noto Sans Thai",sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+    min-height:76px;
+    padding:0 42px;
+
+    display:grid;
+    grid-template-columns:300px 1fr 260px;
+    align-items:center;
+
+    position:sticky;
+    top:0;
+    z-index:100;
+
+    background:var(--blue); /* เปลี่ยนพื้นหลังเป็นสีฟ้า */
+    border-bottom:1px solid rgba(255,255,255,.15);
+    box-shadow:0 3px 14px rgba(15,23,42,.1);
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-icon{
+    width:44px;
+    height:44px;
+    border-radius:13px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(255,255,255,.2); /* ปรับพื้นหลังไอคอนให้กลมกลืน */
+    color:white;
+
+    font-size:21px;
+}
+
+.logo-section b,
+.logo-section small{
+    display:block;
+}
+
+.logo-section b{
+    color:white; /* ปรับข้อความโลโก้เป็นสีขาว */
+    font-size:18px;
+    font-weight:950;
+}
+
+.logo-section small{
+    color:var(--blue-light); /* ปรับข้อความย่อยเป็นสีฟ้าอ่อน */
+    font-size:11px;
+}
+
+.menu{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.menu a{
+    min-height:44px;
+    padding:0 16px;
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    color:rgba(255,255,255,.85); /* ลิงก์ปกติให้เนียนไปกับแถบฟ้า */
+    text-decoration:none;
+    font-weight:800;
+    transition:.2s;
+}
+
+.menu a:hover{
+    background:rgba(255,255,255,.15);
+    color:white;
+}
+
+.menu a.active{
+    background:white; /* ปุ่ม Active เด่นชัดด้วยสีขาว */
+    color:var(--blue);
+}
+
+.broker-section{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:10px;
+}
+
+.broker-avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(255,255,255,.2);
+    color:white;
+}
+
+.broker-section b,
+.broker-section a{
+    display:block;
+}
+
+.broker-section b{
+    font-size:13px;
+    color:white; /* ปรับชื่อผู้ใช้งานเป็นสีขาว */
+}
+
+.broker-section a{
+    color:#fca5a5; /* ปุ่มออกจากระบบเป็นสีแดงพาสเทลเพื่อให้อ่านง่ายบนสีฟ้า */
+    text-decoration:none;
+    font-size:11px;
+    font-weight:750;
+}
+
+.broker-section a:hover{
+    text-decoration:underline;
+}
+
+/* HEADER */
+
+.welcome-section{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.logo-circle{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:auto;
+    font-size:40px;
+}
+
+.welcome-section h1{
+    margin-top:20px;
+    font-weight:700;
+}
+
+.welcome-section p{
+    color:#64748b;
+    font-size:18px;
+}
+
+/* CARD */
+
+.menu-card{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+
+    min-height:240px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.menu-card:hover{
+    transform:translateY(-5px);
+}
+
+.card-icon{
+    width:70px;
+    height:70px;
+
+    border-radius:15px;
+
+    background:#dbeafe;
+    color:#2563eb;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.green{
+    background:#dcfce7;
+    color:#16a34a;
+}
+
+.menu-card h3{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.menu-card p{
+    color:#64748b;
+}
+
+.menu-card a{
+    text-decoration:none;
+    font-weight:600;
+}
