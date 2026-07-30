@@ -9,5 +9,5 @@ CREATE DATABASE potato_system_db;
 Import
 
 ```text
-database/potato_management.sql
+database/potato_system_db.sql
 ```
