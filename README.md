@@ -11,3 +11,8 @@ Import
 ```text
 database/potato_system_db.sql
 ```
+Exaxmple data
+```text
+Broker | username : broker1  password: 123456
+Farmer | username : new_farmer password : 123456
+```
