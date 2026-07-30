@@ -3,7 +3,7 @@
 Import the SQL dump before running the application.
 
 ```bash
-CREATE DATABASE potato_management;
+CREATE DATABASE potato_system_db;
 ```
 
 Import
